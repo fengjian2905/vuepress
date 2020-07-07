@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>小程序分页加载 | 风间的技术栈</title>
+    <meta name="description" content="风间的技术栈">
+    <link rel="icon" href="/favicon.ico">
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    
+    <link rel="preload" href="/assets/css/0.styles.a2aa872b.css" as="style"><link rel="preload" href="/assets/js/app.c5a7abc6.js" as="script"><link rel="preload" href="/assets/js/3.4c596803.js" as="script"><link rel="preload" href="/assets/js/1.bddbeb83.js" as="script"><link rel="preload" href="/assets/js/82.4b41ea00.js" as="script"><link rel="prefetch" href="/assets/js/10.b9d68160.js"><link rel="prefetch" href="/assets/js/100.047c29db.js"><link rel="prefetch" href="/assets/js/101.143fbd29.js"><link rel="prefetch" href="/assets/js/11.d44f14ae.js"><link rel="prefetch" href="/assets/js/12.230614bb.js"><link rel="prefetch" href="/assets/js/13.cedaa4dd.js"><link rel="prefetch" href="/assets/js/14.cf0e86d9.js"><link rel="prefetch" href="/assets/js/15.30497c2f.js"><link rel="prefetch" href="/assets/js/16.e5093235.js"><link rel="prefetch" href="/assets/js/17.1c0bb9b2.js"><link rel="prefetch" href="/assets/js/18.041b0f6a.js"><link rel="prefetch" href="/assets/js/19.3d31afbb.js"><link rel="prefetch" href="/assets/js/20.62e7ec39.js"><link rel="prefetch" href="/assets/js/21.a727ec51.js"><link rel="prefetch" href="/assets/js/22.7663ae85.js"><link rel="prefetch" href="/assets/js/23.90b194e3.js"><link rel="prefetch" href="/assets/js/24.60f304ba.js"><link rel="prefetch" href="/assets/js/25.3b3f3077.js"><link rel="prefetch" href="/assets/js/26.445aa46b.js"><link rel="prefetch" href="/assets/js/27.a148d500.js"><link rel="prefetch" href="/assets/js/28.ac00ebe6.js"><link rel="prefetch" href="/assets/js/29.36277f2c.js"><link rel="prefetch" href="/assets/js/30.b34a9043.js"><link rel="prefetch" href="/assets/js/31.83e6de25.js"><link rel="prefetch" href="/assets/js/32.04609852.js"><link rel="prefetch" href="/assets/js/33.7c9cc307.js"><link rel="prefetch" href="/assets/js/34.86b4fa3e.js"><link rel="prefetch" href="/assets/js/35.945a10a3.js"><link rel="prefetch" href="/assets/js/36.4a2fefa0.js"><link rel="prefetch" href="/assets/js/37.db8fab65.js"><link rel="prefetch" href="/assets/js/38.c18d2543.js"><link rel="prefetch" href="/assets/js/39.9a53d85b.js"><link rel="prefetch" href="/assets/js/4.65f3738c.js"><link rel="prefetch" href="/assets/js/40.b1752d40.js"><link rel="prefetch" href="/assets/js/41.bda4942a.js"><link rel="prefetch" href="/assets/js/42.f6a5d44b.js"><link rel="prefetch" href="/assets/js/43.8eabaf46.js"><link rel="prefetch" href="/assets/js/44.7ebd052a.js"><link rel="prefetch" href="/assets/js/45.74f35983.js"><link rel="prefetch" href="/assets/js/46.c1f0d818.js"><link rel="prefetch" href="/assets/js/47.31b9563e.js"><link rel="prefetch" href="/assets/js/48.67f17f78.js"><link rel="prefetch" href="/assets/js/49.b5dea3a6.js"><link rel="prefetch" href="/assets/js/5.173246a3.js"><link rel="prefetch" href="/assets/js/50.444c1936.js"><link rel="prefetch" href="/assets/js/51.8a1ad4eb.js"><link rel="prefetch" href="/assets/js/52.0ac380dd.js"><link rel="prefetch" href="/assets/js/53.54ed521c.js"><link rel="prefetch" href="/assets/js/54.0786983c.js"><link rel="prefetch" href="/assets/js/55.eba2245f.js"><link rel="prefetch" href="/assets/js/56.600e56d5.js"><link rel="prefetch" href="/assets/js/57.2484f5da.js"><link rel="prefetch" href="/assets/js/58.f9ea2330.js"><link rel="prefetch" href="/assets/js/59.940305ce.js"><link rel="prefetch" href="/assets/js/6.45133ea5.js"><link rel="prefetch" href="/assets/js/60.a36d80c0.js"><link rel="prefetch" href="/assets/js/61.829e849f.js"><link rel="prefetch" href="/assets/js/62.ccfeca39.js"><link rel="prefetch" href="/assets/js/63.e87f3830.js"><link rel="prefetch" href="/assets/js/64.451902bc.js"><link rel="prefetch" href="/assets/js/65.c2c98a34.js"><link rel="prefetch" href="/assets/js/66.584bc155.js"><link rel="prefetch" href="/assets/js/67.8b4b06c0.js"><link rel="prefetch" href="/assets/js/68.27a9f48a.js"><link rel="prefetch" href="/assets/js/69.8f439f17.js"><link rel="prefetch" href="/assets/js/7.fbfec349.js"><link rel="prefetch" href="/assets/js/70.6898bb88.js"><link rel="prefetch" href="/assets/js/71.2bc4ebd7.js"><link rel="prefetch" href="/assets/js/72.90048a1e.js"><link rel="prefetch" href="/assets/js/73.04296406.js"><link rel="prefetch" href="/assets/js/74.6f05291d.js"><link rel="prefetch" href="/assets/js/75.39a8f362.js"><link rel="prefetch" href="/assets/js/76.97467347.js"><link rel="prefetch" href="/assets/js/77.bf5e40d5.js"><link rel="prefetch" href="/assets/js/78.1e1f0bd8.js"><link rel="prefetch" href="/assets/js/79.62f3c407.js"><link rel="prefetch" href="/assets/js/8.ec46c32b.js"><link rel="prefetch" href="/assets/js/80.d59ef904.js"><link rel="prefetch" href="/assets/js/81.5d0f60e0.js"><link rel="prefetch" href="/assets/js/83.b6096561.js"><link rel="prefetch" href="/assets/js/84.da966883.js"><link rel="prefetch" href="/assets/js/85.355b804b.js"><link rel="prefetch" href="/assets/js/86.ff6ffbbb.js"><link rel="prefetch" href="/assets/js/87.4a2b3536.js"><link rel="prefetch" href="/assets/js/88.f9430200.js"><link rel="prefetch" href="/assets/js/89.d60f12d0.js"><link rel="prefetch" href="/assets/js/9.fe626446.js"><link rel="prefetch" href="/assets/js/90.9928bf5a.js"><link rel="prefetch" href="/assets/js/91.c9334031.js"><link rel="prefetch" href="/assets/js/92.d85956e2.js"><link rel="prefetch" href="/assets/js/93.0dd7bc12.js"><link rel="prefetch" href="/assets/js/94.4f9422f1.js"><link rel="prefetch" href="/assets/js/95.3425b4ed.js"><link rel="prefetch" href="/assets/js/96.975e7118.js"><link rel="prefetch" href="/assets/js/97.2dfa090c.js"><link rel="prefetch" href="/assets/js/98.f8bd4057.js"><link rel="prefetch" href="/assets/js/99.ac340a2c.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.a2aa872b.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div><div class="theme-container" data-v-4698c43e><div data-v-4698c43e><div id="loader-wrapper" class="loading-wrapper" data-v-4b73742e data-v-4698c43e data-v-4698c43e><div class="loader-main" data-v-4b73742e><div data-v-4b73742e></div><div data-v-4b73742e></div><div data-v-4b73742e></div><div data-v-4b73742e></div></div> <!----> <!----></div> <div class="password-shadow password-wrapper-out" style="display:none;" data-v-6cbeab0a data-v-4698c43e data-v-4698c43e><h3 class="title" style="display:none;" data-v-6cbeab0a data-v-6cbeab0a>风间的技术栈</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-6cbeab0a data-v-6cbeab0a><input type="password" value="" data-v-6cbeab0a> <span data-v-6cbeab0a>Konck! Knock!</span> <button data-v-6cbeab0a>OK</button></label> <div class="footer" style="display:none;" data-v-6cbeab0a data-v-6cbeab0a><span data-v-6cbeab0a><i class="iconfont reco-theme" data-v-6cbeab0a></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-6cbeab0a>vuePress-theme-reco</a></span> <span data-v-6cbeab0a><i class="iconfont reco-copyright" data-v-6cbeab0a></i> <a data-v-6cbeab0a><span data-v-6cbeab0a>风间</span>
+            
+          <span data-v-6cbeab0a>2019 - </span>
+          2020
+        </a></span></div></div> <div class="hide" data-v-4698c43e><header class="navbar" data-v-4698c43e><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/book.png" alt="风间的技术栈" class="logo"> <span class="site-name">风间的技术栈</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/Java/" class="nav-link"><i class="iconfont undefined"></i>
+  Java
+</a></li><li class="dropdown-item"><!----> <a href="/categories/python/" class="nav-link"><i class="iconfont undefined"></i>
+  python
+</a></li><li class="dropdown-item"><!----> <a href="/categories/魔方/" class="nav-link"><i class="iconfont undefined"></i>
+  魔方
+</a></li><li class="dropdown-item"><!----> <a href="/categories/小程序/" class="nav-link"><i class="iconfont undefined"></i>
+  小程序
+</a></li><li class="dropdown-item"><!----> <a href="/categories/英语/" class="nav-link"><i class="iconfont undefined"></i>
+  英语
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间线
+</a></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-4698c43e></div> <aside class="sidebar" data-v-4698c43e><div class="personal-info-wrapper" data-v-6c8ffc9c><img src="/avatar.png" alt="author-avatar" class="personal-img" data-v-6c8ffc9c> <h3 class="name" data-v-6c8ffc9c>
+    风间
+  </h3> <div class="num" data-v-6c8ffc9c><div data-v-6c8ffc9c><h3 data-v-6c8ffc9c>90</h3> <h6 data-v-6c8ffc9c>文章</h6></div> <div data-v-6c8ffc9c><h3 data-v-6c8ffc9c>130</h3> <h6 data-v-6c8ffc9c>标签</h6></div></div> <hr data-v-6c8ffc9c></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/Java/" class="nav-link"><i class="iconfont undefined"></i>
+  Java
+</a></li><li class="dropdown-item"><!----> <a href="/categories/python/" class="nav-link"><i class="iconfont undefined"></i>
+  python
+</a></li><li class="dropdown-item"><!----> <a href="/categories/魔方/" class="nav-link"><i class="iconfont undefined"></i>
+  魔方
+</a></li><li class="dropdown-item"><!----> <a href="/categories/小程序/" class="nav-link"><i class="iconfont undefined"></i>
+  小程序
+</a></li><li class="dropdown-item"><!----> <a href="/categories/英语/" class="nav-link"><i class="iconfont undefined"></i>
+  英语
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间线
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>小程序分页加载</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/views/%E5%B0%8F%E7%A8%8B%E5%BA%8F/%E9%A3%8E%E8%A2%96/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%88%86%E9%A1%B5%E5%8A%A0%E8%BD%BD.html#服务端返回分页数据" class="sidebar-link">服务端返回分页数据</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/views/%E5%B0%8F%E7%A8%8B%E5%BA%8F/%E9%A3%8E%E8%A2%96/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%88%86%E9%A1%B5%E5%8A%A0%E8%BD%BD.html#分页加载数据细节" class="sidebar-link">分页加载数据细节</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/views/%E5%B0%8F%E7%A8%8B%E5%BA%8F/%E9%A3%8E%E8%A2%96/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%88%86%E9%A1%B5%E5%8A%A0%E8%BD%BD.html#定义paging类封装分页加载数据细节" class="sidebar-link">定义Paging类封装分页加载数据细节</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/views/%E5%B0%8F%E7%A8%8B%E5%BA%8F/%E9%A3%8E%E8%A2%96/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%88%86%E9%A1%B5%E5%8A%A0%E8%BD%BD.html#初实现" class="sidebar-link">初实现</a></li><li class="sidebar-sub-header"><a href="/views/%E5%B0%8F%E7%A8%8B%E5%BA%8F/%E9%A3%8E%E8%A2%96/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%88%86%E9%A1%B5%E5%8A%A0%E8%BD%BD.html#再次加工" class="sidebar-link">再次加工</a></li><li class="sidebar-sub-header"><a href="/views/%E5%B0%8F%E7%A8%8B%E5%BA%8F/%E9%A3%8E%E8%A2%96/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%88%86%E9%A1%B5%E5%8A%A0%E8%BD%BD.html#处理服务端返回数据" class="sidebar-link">处理服务端返回数据</a></li><li class="sidebar-sub-header"><a href="/views/%E5%B0%8F%E7%A8%8B%E5%BA%8F/%E9%A3%8E%E8%A2%96/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%88%86%E9%A1%B5%E5%8A%A0%E8%BD%BD.html#最终版本" class="sidebar-link">最终版本</a></li></ul></li></ul></section></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-6cbeab0a data-v-4698c43e><h3 class="title" style="display:none;" data-v-6cbeab0a data-v-6cbeab0a>小程序分页加载</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-6cbeab0a data-v-6cbeab0a><input type="password" value="" data-v-6cbeab0a> <span data-v-6cbeab0a>Konck! Knock!</span> <button data-v-6cbeab0a>OK</button></label> <div class="footer" style="display:none;" data-v-6cbeab0a data-v-6cbeab0a><span data-v-6cbeab0a><i class="iconfont reco-theme" data-v-6cbeab0a></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-6cbeab0a>vuePress-theme-reco</a></span> <span data-v-6cbeab0a><i class="iconfont reco-copyright" data-v-6cbeab0a></i> <a data-v-6cbeab0a><span data-v-6cbeab0a>风间</span>
+            
+          <span data-v-6cbeab0a>2019 - </span>
+          2020
+        </a></span></div></div> <div data-v-4698c43e><main class="page"><!----> <div class="page-title" style="display:none;"><h1>小程序分页加载</h1> <hr> <div data-v-484a899e><i class="iconfont reco-account" data-v-484a899e><span data-v-484a899e>风间</span></i> <i class="iconfont reco-date" data-v-484a899e><span data-v-484a899e>2020-01-30</span></i> <i class="iconfont reco-eye" data-v-484a899e><!----></i> <i class="iconfont reco-tag tags" data-v-484a899e><span class="tag-item" data-v-484a899e>
+      小程序
+    </span><span class="tag-item" data-v-484a899e>
+      分页加载
+    </span></i></div></div> <div class="theme-reco-content content__default" style="display:none;"><h2 id="服务端返回分页数据"><a href="#服务端返回分页数据" class="header-anchor">#</a> 服务端返回分页数据</h2> <div class="language-json line-numbers-mode"><pre class="language-json"><code><span class="token punctuation">{</span>
+    <span class="token property">&quot;total&quot;</span><span class="token operator">:</span><span class="token number">1</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;count&quot;</span><span class="token operator">:</span><span class="token number">10</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;page&quot;</span><span class="token operator">:</span><span class="token number">0</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;total_page&quot;</span><span class="token operator">:</span><span class="token number">1</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;items&quot;</span><span class="token operator">:</span><span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+            <span class="token property">&quot;id&quot;</span><span class="token operator">:</span><span class="token number">8</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;title&quot;</span><span class="token operator">:</span><span class="token string">&quot;ins复古翠绿NoteBook&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;subtitle&quot;</span><span class="token operator">:</span><span class="token string">&quot;林白默默的掏出小本本，将她说的话一次不漏的记了下来。&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;img&quot;</span><span class="token operator">:</span><span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;for_theme_img&quot;</span><span class="token operator">:</span><span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;price&quot;</span><span class="token operator">:</span><span class="token string">&quot;29.99&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;discount_price&quot;</span><span class="token operator">:</span><span class="token string">&quot;27.8&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;description&quot;</span><span class="token operator">:</span><span class="token null keyword">null</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;tags&quot;</span><span class="token operator">:</span><span class="token string">&quot;林白推荐&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;sketch_spec_id&quot;</span><span class="token operator">:</span><span class="token string">&quot;1&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;max_purchase_quantity&quot;</span><span class="token operator">:</span><span class="token null keyword">null</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;min_purchase_quantity&quot;</span><span class="token operator">:</span><span class="token null keyword">null</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br></div></div><h2 id="分页加载数据细节"><a href="#分页加载数据细节" class="header-anchor">#</a> 分页加载数据细节</h2> <p>1.如果服务器一条数据都没有 空<br>
+2.最后一页，还有没有更多都数据<br>
+3.累加，服务器有100条数据，第一次1-20 第二次21-40 ...，setData重新渲染所有数据<br>
+4.非分页数据加载状态：正在加载 数据为空；<br>
+分页数据加载状态：正在加载 加载完成 有更多数据（提醒用户不要在滑滑滑了）<br>
+5.上滑页面触底，避免用户重复发送请求<br>
+6.按钮点击操作：防抖 截流 （禁用、倒计时、模态loading、数据锁...）<br>
+7.start count,每次请求start需要重新计算<br>
+8.封装性（类-ES6、函数-ES5）</p> <h2 id="定义paging类封装分页加载数据细节"><a href="#定义paging类封装分页加载数据细节" class="header-anchor">#</a> 定义Paging类封装分页加载数据细节</h2> <blockquote><p>美好的愿望：<br>
+当我们要获取分页数据的时候，不需要关心细节，我们就告诉Paging '我需要分页数据了，你能给我吗？'，
+由Paging对象决定是否返回我们所需要的数据，Paging对象负责跟服务器交互。</p></blockquote> <h3 id="初实现"><a href="#初实现" class="header-anchor">#</a> 初实现</h3> <p>1.Paging对象需要一个公共的方法，供外部调用<code>getMoreData</code>用于获取下一页数据<br>
+2.在Paging的构造函数中设置服务器接口所需要的参数<code>constructor(url,count,start)</code>，初始化加载数据<br>
+3.<code>getMoreData</code>向服务器发送请求时，使用锁（<code>loker</code>）来避免用户重复发送请求，每次请求之前检测锁是否锁住(<code>getLocker</code>)，
+锁住的情况下不允许发送请求，一次请求结束后要释放锁(<code>releaseLocker</code>)</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">class</span> <span class="token class-name">Paging</span> <span class="token punctuation">{</span>
+
+    start
+    count
+    url
+    locker <span class="token operator">=</span> <span class="token boolean">false</span>
+
+    <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter">url<span class="token punctuation">,</span>count<span class="token operator">=</span><span class="token number">10</span><span class="token punctuation">,</span>start<span class="token operator">=</span><span class="token number">0</span></span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>url <span class="token operator">=</span> url
+        <span class="token keyword">this</span><span class="token punctuation">.</span>count <span class="token operator">=</span> count
+        <span class="token keyword">this</span><span class="token punctuation">.</span>start <span class="token operator">=</span> start
+    <span class="token punctuation">}</span>
+
+    <span class="token function">getMoreData</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token comment">//getLocker</span>
+        <span class="token comment">//request</span>
+        <span class="token comment">//releaseLocker</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">_getLocker</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    <span class="token keyword">return</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">_actualGetData</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">_releaseLocker</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token function">_actualGetData</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        Http<span class="token punctuation">.</span><span class="token function">request</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token function">_getLocker</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>locker<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token boolean">false</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>locker <span class="token operator">=</span> <span class="token boolean">true</span>
+        <span class="token keyword">return</span> <span class="token boolean">true</span>
+    <span class="token punctuation">}</span>
+    
+    <span class="token function">_releaseLocker</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>locker <span class="token operator">=</span> <span class="token boolean">false</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br></div></div><h3 id="再次加工"><a href="#再次加工" class="header-anchor">#</a> 再次加工</h3> <p>1.Http的request方法所需要的参数<code>request({url, data, method = 'GET'})</code>，这里request是接收一个对象，
+这个对象表明用户还可能传递data和method参数，构造函数中只是有一个url不能满足需要，
+所以<code>constructor</code>的参数要把url改为一个req，这个req（对象）可以包含url、data、method<br>
+2.req中的url的形式<code>v1/spu/latest?start=0&amp;count=10</code>，这里不可以直接使用
+Http.request(req)，req中的url还需要进行处理，start和count的拼接（不需要用户来处理），
+<code>_getCurrentReq</code></p> <div class="language-js line-numbers-mode"><pre class="language-js"><code>    <span class="token keyword">class</span> <span class="token class-name">Paging</span> <span class="token punctuation">{</span>
+    
+        start
+        count
+        req
+        locker <span class="token operator">=</span> <span class="token boolean">false</span>
+        url
+        <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter">req<span class="token punctuation">,</span>count<span class="token operator">=</span><span class="token number">10</span><span class="token punctuation">,</span>start<span class="token operator">=</span><span class="token number">0</span></span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span>req <span class="token operator">=</span> req
+            <span class="token keyword">this</span><span class="token punctuation">.</span>count <span class="token operator">=</span> count
+            <span class="token keyword">this</span><span class="token punctuation">.</span>start <span class="token operator">=</span> start
+            <span class="token keyword">this</span><span class="token punctuation">.</span>url <span class="token operator">=</span> req<span class="token punctuation">.</span>url
+        <span class="token punctuation">}</span>
+    
+        <span class="token function">getMoreData</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">_getLocker</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">return</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">_actualGetData</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">_releaseLocker</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+    
+        <span class="token function">_actualGetData</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            Http<span class="token punctuation">.</span><span class="token function">request</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>req<span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+    
+        <span class="token function">_getCurrentReq</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token comment">//let url = this.req.url 如果这样定义，</span>
+            <span class="token comment">// 在下面代码this.req.url = url时会出现重复拼接错误，</span>
+            <span class="token comment">//所以在属性中添加一个url来保存req中的初始url</span>
+            <span class="token keyword">let</span> url <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>url
+            <span class="token keyword">const</span> params <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">start=</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token keyword">this</span><span class="token punctuation">.</span>start<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">&amp;count=</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token keyword">this</span><span class="token punctuation">.</span>count<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>url<span class="token punctuation">.</span><span class="token function">includes</span><span class="token punctuation">(</span><span class="token string">'?'</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                url <span class="token operator">+=</span><span class="token string">'&amp;'</span><span class="token operator">+</span>params
+            <span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
+                url <span class="token operator">+=</span><span class="token string">'?'</span><span class="token operator">+</span>params
+            <span class="token punctuation">}</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span>req<span class="token punctuation">.</span>url <span class="token operator">=</span> url
+            <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>req
+        <span class="token punctuation">}</span>
+    
+        <span class="token function">_getLocker</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>locker<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">return</span> <span class="token boolean">false</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span>locker <span class="token operator">=</span> <span class="token boolean">true</span>
+            <span class="token keyword">return</span> <span class="token boolean">true</span>
+        <span class="token punctuation">}</span>
+    
+        <span class="token function">_releaseLocker</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span>locker <span class="token operator">=</span> <span class="token boolean">false</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br></div></div><h3 id="处理服务端返回数据"><a href="#处理服务端返回数据" class="header-anchor">#</a> 处理服务端返回数据</h3> <p>Paging对象不可能直接把服务器返回的数据原封不动的返回给用户，还要针对上面分析的细节
+进行处理，定义一个对象将以上细节返回给用户是比较合适的<br>
+这个对象包含的属性：<br>
+empty（一条数据都没有）<br>
+items（分页数据，当前请求的数据）<br>
+moreData（是否最后一页）<br>
+accumulator(累加器，历史请求的所有分页数据)</p> <div class="language-json line-numbers-mode"><pre class="language-json"><code>   <span class="token punctuation">{</span>
+       empty<span class="token operator">:</span>boolean<span class="token punctuation">,</span>
+       items<span class="token operator">:</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+       moreData<span class="token operator">:</span>boolean<span class="token punctuation">,</span>
+       accumulator<span class="token operator">:</span><span class="token punctuation">[</span><span class="token punctuation">]</span>
+   <span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><h3 id="最终版本"><a href="#最终版本" class="header-anchor">#</a> 最终版本</h3> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">class</span> <span class="token class-name">Paging</span> <span class="token punctuation">{</span>
+
+    start
+    count
+    req
+    locker <span class="token operator">=</span> <span class="token boolean">false</span>
+    url
+    moreData
+    accumulator
+
+    <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter">req<span class="token punctuation">,</span>count<span class="token operator">=</span><span class="token number">10</span><span class="token punctuation">,</span>start<span class="token operator">=</span><span class="token number">0</span></span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>req <span class="token operator">=</span> req
+        <span class="token keyword">this</span><span class="token punctuation">.</span>count <span class="token operator">=</span> count
+        <span class="token keyword">this</span><span class="token punctuation">.</span>start <span class="token operator">=</span> start
+        <span class="token keyword">this</span><span class="token punctuation">.</span>url <span class="token operator">=</span> req<span class="token punctuation">.</span>url
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">async</span> <span class="token function">getMoreData</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token keyword">this</span><span class="token punctuation">.</span>moreData<span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">return</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">_getLocker</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">const</span> data <span class="token operator">=</span> <span class="token keyword">await</span>  <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">_actualGetData</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">_releaseLocker</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token keyword">return</span> data
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">async</span> <span class="token function">_actualGetData</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">const</span> req <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">_getCurrentReq</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token keyword">let</span> paging <span class="token operator">=</span> <span class="token keyword">await</span> Http<span class="token punctuation">.</span><span class="token function">request</span><span class="token punctuation">(</span>req<span class="token punctuation">)</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>paging<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>paging<span class="token punctuation">.</span>total<span class="token operator">===</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token punctuation">{</span>
+                empty<span class="token operator">:</span><span class="token boolean">true</span><span class="token punctuation">,</span>
+                items<span class="token operator">:</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+                moreData<span class="token operator">:</span><span class="token boolean">false</span><span class="token punctuation">,</span>
+                accumulator<span class="token operator">:</span><span class="token punctuation">[</span><span class="token punctuation">]</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>moreData <span class="token operator">=</span> Paging<span class="token punctuation">.</span><span class="token function">_moreData</span><span class="token punctuation">(</span>paging<span class="token punctuation">.</span>total_page<span class="token punctuation">,</span>paging<span class="token punctuation">.</span>page<span class="token punctuation">)</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>moreData<span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span>start <span class="token operator">+=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>count
+        <span class="token punctuation">}</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">_accumulator</span><span class="token punctuation">(</span>paging<span class="token punctuation">.</span>items<span class="token punctuation">)</span>
+        <span class="token keyword">return</span> <span class="token punctuation">{</span>
+            empty<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+            items<span class="token operator">:</span> paging<span class="token punctuation">.</span>items<span class="token punctuation">,</span>
+            moreData<span class="token operator">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span>moreData<span class="token punctuation">,</span>
+            accumulator<span class="token operator">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span>accumulator
+        <span class="token punctuation">}</span>
+
+    <span class="token punctuation">}</span>
+
+    <span class="token function">_accumulator</span><span class="token punctuation">(</span><span class="token parameter">items</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>accumulator <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>accumulator<span class="token punctuation">.</span><span class="token function">concat</span><span class="token punctuation">(</span>items<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">static</span> <span class="token function">_moreData</span><span class="token punctuation">(</span><span class="token parameter">totalPage<span class="token punctuation">,</span>pageNum</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">return</span> pageNum <span class="token operator">&lt;</span> totalPage <span class="token operator">-</span><span class="token number">1</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token function">_getCurrentReq</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">let</span> url <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>url
+        <span class="token keyword">const</span> params <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">start=</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token keyword">this</span><span class="token punctuation">.</span>start<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">&amp;count=</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token keyword">this</span><span class="token punctuation">.</span>count<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>url<span class="token punctuation">.</span><span class="token function">includes</span><span class="token punctuation">(</span><span class="token string">'?'</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            url <span class="token operator">+=</span><span class="token string">'&amp;'</span><span class="token operator">+</span>params
+        <span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
+            url <span class="token operator">+=</span><span class="token string">'?'</span><span class="token operator">+</span>params
+        <span class="token punctuation">}</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>req<span class="token punctuation">.</span>url <span class="token operator">=</span> url
+        <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>req
+    <span class="token punctuation">}</span>
+
+    <span class="token function">_getLocker</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>locker<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token boolean">false</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>locker <span class="token operator">=</span> <span class="token boolean">true</span>
+        <span class="token keyword">return</span> <span class="token boolean">true</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token function">_releaseLocker</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>locker <span class="token operator">=</span> <span class="token boolean">false</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br></div></div></div> <footer class="page-edit" style="display:none;"><!----> <!----></footer> <!----> <!----></main> <!----> <div class="comments-wrapper" data-v-4698c43e><!----></div></div></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-a81d141e data-v-a81d141e><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-a81d141e><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-a81d141e></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-a81d141e></path></svg></div></div></div>
+    <script src="/assets/js/app.c5a7abc6.js" defer></script><script src="/assets/js/3.4c596803.js" defer></script><script src="/assets/js/1.bddbeb83.js" defer></script><script src="/assets/js/82.4b41ea00.js" defer></script>
+  </body>
+</html>
